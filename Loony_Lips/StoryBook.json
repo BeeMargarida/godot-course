@@ -1,0 +1,34 @@
+[
+	{
+		"prompts": ["a name" , "a noun", "an adverb", "an adjective"],
+		"story":"Once upon a time someone called %s ate a %s flavoured sandwich wich made him fell all %s inside. It was a %s day."
+	},
+	{
+		"prompts": ["a name" , "a name", "an adjective", "an activity"],
+		"story":"%s and %s were best friends since they were born! They both love %s food and %s."
+	},
+	{
+		"prompts": ["a name" , "a adjective", "a name"],
+		"story":"There was a magicion called in the montain to the north. He lived in a %s house, with his cat named %s."
+	},
+	{
+		"prompts": ["a male name" , "an adjective", "an adverb", "an adverb"],
+		"story":"%s was a businessman for a very %s company. He lived with his %s wife and his %s son."
+	},
+	{
+		"prompts": ["a noun" , "a noun", "a number"],
+		"story":"Potatoes are vey good for your health. They taste like %s and smell like %s, and we should eat them %s time a week."
+	},
+	{
+		"prompts": ["a number" , "an adjective", "an adjective"],
+		"story":"Everyday I wake up at %s and drink my %s coffee and my %s bagel."
+	},
+	{
+		"prompts": ["an adjective" ,"an adjective"],
+		"story":"Voldmort was a very %s wizard and wanted to become the most %s person in the world!"
+	},
+	{
+		"prompts": ["a name" , "a noun", "an adjective", "an adjective"],
+		"story":"Hello, I'm %s and I love %s, as well as %s food and %s activities."
+	}
+]
