@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 [node name="PlayerAnimation" parent="." instance=ExtResource( 2 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1000, 0 )
 current = true
 zoom = Vector2( 3, 3 )
@@ -79,9 +78,9 @@ texture = ExtResource( 6 )
 
 [node name="painSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -5.0
+volume_db = -15.0
 
 [node name="jumpSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
-volume_db = -5.0
+volume_db = -15.0
 [connection signal="animate" from="." to="PlayerAnimation" method="_on_Player_animate"]
