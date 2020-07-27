@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GFX/Interface/bannerHanging.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/GUI.gd" type="Script" id=3]
+[ext_resource path="res://GFX/Interface/panel_woodPaperDetail.png" type="Texture" id=4]
+[ext_resource path="res://GUI/GUI.theme" type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Banner" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -500.0
+margin_right = 500.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 1000, 120 )
+texture = ExtResource( 1 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Banner"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+theme = ExtResource( 5 )
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player1Score" type="Label" parent="Banner/HBoxContainer"]
+margin_left = 65.0
+margin_top = 10.0
+margin_right = 105.0
+margin_bottom = 70.0
+text = "0"
+
+[node name="Title" type="Label" parent="Banner/HBoxContainer"]
+margin_left = 145.0
+margin_top = 10.0
+margin_right = 815.0
+margin_bottom = 70.0
+text = "cubedude kickabout"
+align = 1
+
+[node name="Player2Score" type="Label" parent="Banner/HBoxContainer"]
+margin_left = 855.0
+margin_top = 10.0
+margin_right = 895.0
+margin_bottom = 70.0
+text = "0"
+align = 2
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -100.0
+margin_right = -250.0
+margin_bottom = -100.0
+rect_min_size = Vector2( 500, 200 )
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Popup/VBoxContainer"]
+margin_right = 460.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Player 0 Wins"
+align = 1
+
+[node name="Button" type="Button" parent="Popup/VBoxContainer"]
+margin_top = 64.0
+margin_right = 460.0
+margin_bottom = 121.0
+text = "Play Again"
+[connection signal="pressed" from="Popup/VBoxContainer/Button" to="." method="_on_Button_pressed"]
